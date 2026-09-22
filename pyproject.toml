@@ -1,0 +1,123 @@
+[build-system]
+requires = ["hatchling>=1.18"]
+build-backend = "hatchling.build"
+
+[project]
+name = "lupaxa-dns-blacklist-checker"
+dynamic = ["version"]
+description = "Check whether an IPv4 address or hostname is listed on DNS blacklists."
+readme = "README-PYPI.md"
+license = { file = "LICENCE" }
+requires-python = ">=3.13"
+
+authors = [
+  { name = "The Lupaxa Project" }
+]
+
+keywords = ["dnsbl", "rbl", "blacklist", "dns", "cli", "sre"]
+
+dependencies = [
+  "dnspython>=2.6",
+]
+
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Environment :: Console",
+  "Intended Audience :: System Administrators",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.13",
+  "Programming Language :: Python :: 3.14",
+  "Topic :: Internet",
+  "Topic :: System :: Networking",
+  "Topic :: System :: Systems Administration",
+  "Topic :: Utilities",
+]
+
+[project.urls]
+Homepage = "https://dns-blacklist-checker.thelupaxaproject.org/"
+Documentation = "https://dns-blacklist-checker.thelupaxaproject.org/"
+Repository = "https://github.com/lupaxa-sre-toolbox/dns-blacklist-checker"
+Issues = "https://github.com/lupaxa-sre-toolbox/dns-blacklist-checker/issues"
+
+[project.scripts]
+dns-blacklist-checker = "lupaxa.dns_blacklist_checker.cli:main"
+dnsbl = "lupaxa.dns_blacklist_checker.cli:main"
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.0",
+  "pytest-cov>=5.0",
+  "ruff>=0.6.0",
+  "mypy>=1.12.0",
+  "hatch>=1.12.0",
+  "bump-my-version>=1.2.0",
+  "pip-audit>=2.7.0",
+  "mkdocs==1.6.1",
+  "mkdocs-material==9.7.7",
+]
+test = [
+  "pytest>=8.0",
+  "pytest-cov>=5.0",
+]
+
+[tool.hatch.version]
+path = "src/lupaxa/dns_blacklist_checker/version.py"
+
+[tool.hatch.build.targets.sdist]
+include = [
+  "src/**",
+  "README.md",
+  "README-PYPI.md",
+  "LICENCE",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/lupaxa"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py313"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "S", "UP", "SIM", "C4", "ISC", "D", "ANN", "PT"]
+ignore = [
+  "D200", "D201", "D202", "D203", "D204", "D205", "D206", "D207", "D208", "D209", "D210", "D211", "D212",
+  "ISC001",
+]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/**/*.py" = ["S101", "S104", "S105", "S106", "D", "ANN001", "ANN201"]
+
+[tool.ruff.lint.pydocstyle]
+convention = "numpy"
+
+[tool.ruff.format]
+quote-style = "double"
+
+[tool.mypy]
+python_version = "3.13"
+files = ["src", "tests"]
+mypy_path = "src"
+explicit_package_bases = true
+namespace_packages = true
+warn_unused_configs = true
+warn_return_any = true
+warn_unused_ignores = true
+disallow_untyped_defs = true
+follow_imports = "normal"
+ignore_missing_imports = true
+
+[tool.pytest.ini_options]
+addopts = "-ra -q --disable-warnings --cov=lupaxa.dns_blacklist_checker --cov-report=term-missing"
+testpaths = ["tests"]
+pythonpath = ["src"]
+
+[tool.coverage.run]
+source = ["lupaxa.dns_blacklist_checker"]
+branch = true
+
+[tool.coverage.report]
+show_missing = true
+skip_empty = true
