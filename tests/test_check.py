@@ -63,22 +63,25 @@ class _Answer:
 
 
 def test_default_zones_are_unique_and_include_spamhaus() -> None:
-    assert len(DEFAULT_ZONES) == len(set(DEFAULT_ZONES))
-    assert "zen.spamhaus.org" in DEFAULT_ZONES
-    assert "combined.mail.abusix.zone" in DEFAULT_ZONES
-    assert "dnsbl-1.uceprotect.net" in DEFAULT_ZONES
-    dropped = (
-        "dnsbl.sorbs.net",
-        "spam.dnsbl.sorbs.net",
-        "sbl.spamhaus.org",
-        "xbl.spamhaus.org",
-        "pbl.spamhaus.org",
-        "cbl.abuseat.org",
-        "dnsbl-2.uceprotect.net",
-        "dnsbl-3.uceprotect.net",
+    zones = set(DEFAULT_ZONES)
+    assert len(DEFAULT_ZONES) == len(zones)
+    assert {
+        "zen.spamhaus.org",
+        "combined.mail.abusix.zone",
+        "dnsbl-1.uceprotect.net",
+    } <= zones
+    assert zones.isdisjoint(
+        {
+            "dnsbl.sorbs.net",
+            "spam.dnsbl.sorbs.net",
+            "sbl.spamhaus.org",
+            "xbl.spamhaus.org",
+            "pbl.spamhaus.org",
+            "cbl.abuseat.org",
+            "dnsbl-2.uceprotect.net",
+            "dnsbl-3.uceprotect.net",
+        }
     )
-    for name in dropped:
-        assert name not in DEFAULT_ZONES
 
 
 def test_dnsbl_qname_reverses_ipv4() -> None:
