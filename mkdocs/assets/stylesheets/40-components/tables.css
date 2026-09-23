@@ -64,21 +64,6 @@
   width: 32%;
 }
 
-/* Reference commands table: the module invocation is a long first cell. */
-.md-typeset h2#commands + table tr > :nth-child(1):nth-last-child(2),
-.md-typeset h2#commands + .md-typeset__scrollwrap table tr > :nth-child(1):nth-last-child(2),
-.md-typeset h2#commands + .md-typeset__scrollwrap .md-typeset__table table tr > :nth-child(1):nth-last-child(2) {
-  width: 62%;
-  overflow-wrap: normal;
-  word-break: normal;
-}
-
-.md-typeset h2#commands + table tr > :nth-child(2):nth-last-child(1),
-.md-typeset h2#commands + .md-typeset__scrollwrap table tr > :nth-child(2):nth-last-child(1),
-.md-typeset h2#commands + .md-typeset__scrollwrap .md-typeset__table table tr > :nth-child(2):nth-last-child(1) {
-  width: 38%;
-}
-
 .md-typeset table:not([class]) tr > :nth-child(2):nth-last-child(1),
 .md-typeset .md-typeset__table table tr > :nth-child(2):nth-last-child(1) {
   width: 68%;

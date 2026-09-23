@@ -13,8 +13,6 @@ on:
       - "requirements.txt"
 
   pull_request:
-    branches:
-      - "master"
     paths:
       - ".github/workflows/validate-mkdocs.yml"
       - ".markdownlint.yml"
@@ -24,6 +22,8 @@ on:
       - "mkdocs.yml"
       - "overrides/**"
       - "requirements.txt"
+
+  workflow_dispatch:
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}

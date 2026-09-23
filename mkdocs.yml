@@ -1,6 +1,6 @@
 # yaml-language-server: $schema=https://squidfunk.github.io/mkdocs-material/schema.json
 # =============================================================================
-# Site Information — replace these placeholders per project
+# Site Information
 # =============================================================================
 
 site_name: DNS Blacklist Checker
