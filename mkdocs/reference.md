@@ -11,7 +11,7 @@
 `dnsbl` accepts the same flags and prints the same output as
 `dns-blacklist-checker`.
 
-## CLI arguments
+## CLI Arguments
 
 | Flag              | Default              | Description                                      |
 | :---------------- | :------------------- | :----------------------------------------------- |
@@ -25,7 +25,7 @@
 `--timeout` must be greater than `0`. It sets both the resolver timeout and
 the resolver lifetime for each zone, and for hostname and MX lookups.
 
-## Exit codes
+## Exit Codes
 
 | Code | When                                                              |
 | :--- | :---------------------------------------------------------------- |

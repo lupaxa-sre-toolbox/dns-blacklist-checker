@@ -4,25 +4,25 @@
 the full command name. Swap in `dnsbl` anywhere you would type
 `dns-blacklist-checker`.
 
-## One address, built-in zones
+## One Address, Built-in Zones
 
 ```bash
 dns-blacklist-checker 203.0.113.9
 ```
 
-## Several targets
+## Several Targets
 
 ```bash
 dns-blacklist-checker 192.0.2.1 198.51.100.8 mail.example.com
 ```
 
-## One zone and a shorter timeout
+## One Zone and a Shorter Timeout
 
 ```bash
 dns-blacklist-checker 203.0.113.9 --zone zen.spamhaus.org --timeout 2
 ```
 
-## Library, selected zones
+## Library, Selected Zones
 
 ```python
 from lupaxa.dns_blacklist_checker import check
@@ -36,13 +36,13 @@ for item in result.addresses:
     print(result.query, item.address, item.listed)
 ```
 
-## IPv6 address
+## IPv6 Address
 
 ```bash
 dns-blacklist-checker 2001:db8::1
 ```
 
-## Mail exchangers
+## Mail Exchangers
 
 ```bash
 dns-blacklist-checker example.com --mx
@@ -55,7 +55,7 @@ export SPAMHAUS_DQS_KEY=your-key
 dns-blacklist-checker 203.0.113.9 --spamhaus-key "$SPAMHAUS_DQS_KEY"
 ```
 
-## Query name
+## Query Name
 
 ```python
 from lupaxa.dns_blacklist_checker import dnsbl_qname

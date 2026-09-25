@@ -57,6 +57,9 @@ use_directory_urls: true
 theme:
   name: material
   custom_dir: overrides
+  font:
+    text: IBM Plex Sans
+    code: IBM Plex Mono
   language: en
   logo: assets/images/logo.png
   favicon: assets/images/favicon.png
@@ -95,7 +98,7 @@ hooks:
 
 nav:
   - Home: index.md
-  - Getting started: getting-started.md
+  - Getting Started: getting-started.md
   - Usage: usage.md
   - Reference: reference.md
   - Examples: examples.md

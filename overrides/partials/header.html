@@ -47,7 +47,7 @@
               href="{% if nav_item.url %}{{ nav_item.url | url }}{% elif nav_item.children %}{{ nav_item.children[0].url | url }}{% else %}{{ '' | url }}{% endif %}"
               {% if nav_item.active %}aria-current="page"{% endif %}
             >
-              {{ nav_item.title }}
+              <span class="lupaxa-header__nav-label">{{ nav_item.title }}</span>
             </a>
           </li>
         {% endfor %}

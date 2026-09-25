@@ -6,7 +6,7 @@ build-backend = "hatchling.build"
 name = "lupaxa-dns-blacklist-checker"
 dynamic = ["version"]
 description = "Check whether an IPv4 address or hostname is listed on DNS blacklists."
-readme = "README-PYPI.md"
+readme = "README.md"
 license = { file = "LICENCE" }
 requires-python = ">=3.13"
 
@@ -69,7 +69,6 @@ path = "src/lupaxa/dns_blacklist_checker/version.py"
 include = [
   "src/**",
   "README.md",
-  "README-PYPI.md",
   "LICENCE",
 ]
 

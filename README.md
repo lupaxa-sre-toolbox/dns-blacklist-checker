@@ -4,15 +4,9 @@
   </a>
 </p>
 
-<h1 align="center">dns-blacklist-checker</h1>
+<h1 align="center">DNS Blacklist Checker</h1>
 
 Check whether an IP address or hostname is listed on DNS blacklists.
-
-<p align="center">
-  <a href="https://dns-blacklist-checker.thelupaxaproject.org/">Documentation</a>
-  ·
-  <a href="https://github.com/lupaxa-sre-toolbox/dns-blacklist-checker">GitHub</a>
-</p>
 
 ## Install
 
@@ -54,6 +48,13 @@ make python-install-dev
 make python-check
 make mkdocs-serve
 ```
+
+## Documentation
+
+The published guide is at
+<https://dns-blacklist-checker.thelupaxaproject.org/>.
+
+Site Markdown lives in `mkdocs/`.
 
 <a href="https://github.com/the-lupaxa-project">
     <img src="https://raw.githubusercontent.com/the-lupaxa-project/brand-assets/master/logos/components/footer-for-child-orgs.svg" alt="The Lupaxa Project Footer" width="100%" />

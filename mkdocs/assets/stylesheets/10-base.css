@@ -26,30 +26,39 @@
   margin-top: var(--lupaxa-spacing-md);
   margin-bottom: var(--lupaxa-spacing-md);
   color: var(--md-default-fg-color);
-  font-size: clamp(1.9rem, 3vw, 2.4rem);
+  font-size: clamp(1.65rem, 2.2vw, 2rem);
   font-weight: 650;
   line-height: 1.15;
   letter-spacing: -0.03em;
   text-decoration: underline;
+  text-decoration-color: var(--lupaxa-light-blue);
   text-decoration-thickness: 2px;
   text-underline-offset: 5px;
+  text-decoration-skip-ink: auto;
 }
 
 .md-typeset h2 {
   margin-top: var(--lupaxa-spacing-lg);
   margin-bottom: var(--lupaxa-spacing-md);
   color: var(--md-default-fg-color);
-  font-size: clamp(1.35rem, 2.2vw, 1.7rem);
+  font-size: clamp(1.2rem, 1.7vw, 1.45rem);
   font-weight: 650;
   line-height: 1.25;
   letter-spacing: -0.02em;
   text-decoration: underline;
+  text-decoration-color: var(--lupaxa-light-blue);
   text-decoration-thickness: 2px;
   text-underline-offset: 5px;
+  text-decoration-skip-ink: auto;
 }
 
 .md-typeset h2:first-of-type {
   margin-top: var(--lupaxa-spacing-md);
+}
+
+.md-typeset ol li,
+.md-typeset ul li {
+  margin-bottom: 0.15em;
 }
 
 .md-typeset h3 {

@@ -1,4 +1,4 @@
-# Getting started
+# Getting Started
 
 ## Requirements
 
@@ -14,7 +14,7 @@ pip install lupaxa-dns-blacklist-checker
 dns-blacklist-checker --help
 ```
 
-## First run
+## First Run
 
 ```bash
 dns-blacklist-checker 192.0.2.1 example.com
@@ -33,7 +33,7 @@ Module entry point:
 python -m lupaxa.dns_blacklist_checker --version
 ```
 
-### From source (development)
+### From Source (Development)
 
 ```bash
 make init
@@ -41,7 +41,7 @@ make python-install-dev
 dns-blacklist-checker --version
 ```
 
-## Makefile helpers
+## Makefile Helpers
 
 ```bash
 make python-check
