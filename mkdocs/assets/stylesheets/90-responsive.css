@@ -56,6 +56,11 @@
     z-index: 30;
   }
 
+  /* Drop the TOC with the left nav. Material otherwise keeps it until ~60em. */
+  .md-sidebar--secondary {
+    display: none !important;
+  }
+
   .md-overlay {
     z-index: 20;
   }
