@@ -1,8 +1,7 @@
-# yamllint — MkDocs portal / GitHub Actions (Lupaxa defaults)
+# yamllint — GitHub Actions (Lupaxa defaults)
 extends: default
 
 ignore: |
-  site/
   cursor-docs/
 
 rules:

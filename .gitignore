@@ -8,9 +8,6 @@ cursor-docs
 # Make
 .makefiles/
 
-# MkDocs
-site/
-
 # Python
 .venv/
 .coverage

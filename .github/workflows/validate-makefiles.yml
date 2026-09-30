@@ -39,7 +39,7 @@ jobs:
     uses: the-lupaxa-project/workflows/.github/workflows/reusable-makefile-linter.yml@master
     with:
       check_conventions: true
-      exclude_files: "^site/|^mkdocs/|^\\.makefiles/"
+      exclude_files: "^\\.makefiles/"
 
   generate-workflow-summary:
     name: Generate Workflow Summary

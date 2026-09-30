@@ -1,4 +1,4 @@
-# markdownlint — MkDocs / Material (Lupaxa defaults, short form)
+# markdownlint — Lupaxa defaults
 default: true
 
 MD003:
